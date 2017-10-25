@@ -8,4 +8,5 @@ phases:
     commands: 
       - "echo Entered the build phase..."
       - "echo Build started on `date`"
+      - "mvn install"
 version: 0.2
