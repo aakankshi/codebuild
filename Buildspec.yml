@@ -1,18 +1,21 @@
 version: 0.2
-phases: 
-  build: 
-    commands: 
-      - "echo Build started on `date`"
-      - "mvn install"
-  install: 
-    commands: 
-      - "echo Nothing to do in the install phase..."
-  post_build: 
-    commands: 
-      - "echo Build completed on `date`"
-  pre_build: 
-    commands: 
-      - "echo Nothing to do in the pre_build phase..."
- artifacts: 
-  files: 
+
+phases:
+  install:
+    commands:
+      - echo nothing to install...
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - mvn install
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
+artifacts:
+  files:
     - target/*.*
